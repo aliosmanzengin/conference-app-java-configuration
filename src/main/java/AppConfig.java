@@ -15,9 +15,11 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class AppConfig {
 
+    //changing the scope will change the pattern
     @Bean(name = "speakerService")
     @Scope(value= BeanDefinition.SCOPE_SINGLETON)
-    public SpeakerService getSpeakerService(){
+//    @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
+    public SpeakerService getSpeakerService() {
 //        return new SpeakerServiceImpl();
         SpeakerServiceImpl service = new SpeakerServiceImpl(getSpeakerRepository());
 //        service.setRepository(getSpeakerRepository());
@@ -25,7 +27,7 @@ public class AppConfig {
     }
 
     @Bean(name = "speakerRepository")
-    public SpeakerRepository getSpeakerRepository(){
+    public SpeakerRepository getSpeakerRepository() {
 
         return new HibernateSpeakerRepositoryImpl();
 
