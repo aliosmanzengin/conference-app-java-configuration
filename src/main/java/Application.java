@@ -28,6 +28,14 @@ Spring is all about removing configuration code from you application
     Each time you request a bean from the container, you're guaranteed a unique instance
     It is essentially the opposite of a singleton.
      */
+
+    /*
+    STEREOTYPES ANNOTATIONS - to fully autowire
+    @Component -> same thing as @Bean
+    @Repository -> used to denote a class that's being used as a repository object
+    @Service -> Service is neighter a microservice nor a webservice. it rather means where you would put your business logic
+    @Controller -> Spring MVC
+     */
     public static void main(String[] args) {
         ApplicationContext appCntext = new AnnotationConfigApplicationContext(AppConfig.class);
 //        SpeakerService service = new SpeakerServiceImpl();
