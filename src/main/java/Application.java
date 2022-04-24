@@ -41,13 +41,14 @@ Spring is all about removing configuration code from you application
 //        SpeakerService service = new SpeakerServiceImpl();
         SpeakerService service = appCntext.getBean("speakerService", SpeakerService.class);
 
-        System.out.println(service);
+//        System.out.println(service);
         System.out.println(service.findAll().get(0).getFirstName());
+        System.out.println(service.findAll().get(0).getSeedNum());
 
         //Created another obj to show off singleton
-        SpeakerService service2 = appCntext.getBean("speakerService", SpeakerService.class);
+//        SpeakerService service2 = appCntext.getBean("speakerService", SpeakerService.class);
 
-        System.out.println(service2);
+//        System.out.println(service2);
         //same result because of the singleton
 
     }
